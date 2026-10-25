@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    --font-serif: 'Instrument Serif', Georgia, serif;
+    --font-mono: 'JetBrains Mono', monospace;
+
+    /* Sunset Mountain Alpenglow Palette */
+    --color-alpenglow: #e28766;
+    --color-dusk-gold: #f6c492;
+    --color-twilight-bg: #0b0e14;
+    --color-surface: #131722;
+    --color-surface-hover: #181d2a;
+    --color-border: #232838;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #0b0e14;
+    color: #ede7e1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    min-height: 100vh;
+  }
+
+  h1, h2, h3, .font-serif-display {
+    font-family: var(--font-serif);
+    font-weight: 400;
+    letter-spacing: -0.01em;
+  }
+
+  code, pre, .font-mono {
+    font-family: var(--font-mono);
+    font-feature-settings: 'tnum' on, 'zero' on;
+  }
+}
+
+/* Custom scrollbar matching twilight palette */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(11, 14, 20, 0.8);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(140, 120, 110, 0.35);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(226, 135, 102, 0.5);
+}
